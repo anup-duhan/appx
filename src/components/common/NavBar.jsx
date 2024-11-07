@@ -1,26 +1,26 @@
-// Navbar.js
 import React, { useState } from "react";
 import logo from '../../assests/images/logo.png';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" nav-bgcolor text-white sticky top-0 z-[1000]">
+    <nav className="nav-bgcolor text-white sticky top-0 z-[1000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-         <img src={logo} alt="logo" className="w-[33px] h-[33px]" />
+            <img src={logo} alt="logo" className="w-[33px] h-[33px]" />
           </div>
 
           {/* Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#home" className="hover:text-orange-700 font-bold  transition duration-1000 nav-item relative">Home</a>
-            <a href="#about" className="hover:text-orange-700 font-bold  transition duration-1000 nav-item relative">About</a>
-            <a href="#services" className="hover:text-orange-700 font-bold  transition duration-1000 nav-item relative">Services</a>
-            <a href="#services" className="hover:text-orange-700 font-bold  transition duration-1000 nav-item relative">Portfolio</a>
-            <a href="#services" className="hover:text-orange-700 font-bold  transition duration-1000 nav-item relative">Blogs</a>
-            <a href="#contact" className="hover:text-orange-700 font-bold  transition duration-1000 nav-item relative">Contact</a>
+            <a href="#home" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Home</a>
+            <a href="#about" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">About</a>
+            <a href="#services" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Services</a>
+            <a href="#portfolio" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Portfolio</a>
+            <a href="#blogs" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Blogs</a>
+            <a href="#contact" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Contact</a>
             <button className="bg-white px-3 py-3 rounded-sm hover:bg-orange-700 hover:text-white duration-1000 text-black button-nav">Get Started</button>
           </div>
 
@@ -50,18 +50,18 @@ const Navbar = () => {
 
         {/* Dropdown for Mobile */}
         <div
-      className={`md:hidden text-center z-50 absolute top-16 left-0 w-full bg-[#fcbf4e] transform transition-transform duration-500 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}
-    >
-      <a href="#home" className="block py-2 px-4 hover:bg-orange-700">Home</a>
-      <a href="#about" className="block py-2 px-4 hover:bg-orange-700">About</a>
-      <a href="#services" className="block py-2 px-4 hover:bg-orange-700">Services</a>
-      <a href="#port" className="block py-2 px-4 hover:bg-orange-700">Portfolio</a>
-      <a href="#blogs" className="block py-2 px-4 hover:bg-orange-700">Blogs</a>
-      <a href="#contact" className="block py-2 px-4 hover:bg-orange-700">Contact</a>
-      <button className="bg-white px-3 py-3 rounded-sm hover:bg-orange-700 hover:text-white duration-1000 text-black my-3">Get Started</button>
-    </div>
+          className={`md:hidden text-center z-50 absolute top-16 left-0 w-full bg-[#fcbf4e] transform transition-transform duration-500 ${
+            isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
+        >
+          <a href="#home" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Home</a>
+          <a href="#about" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>About</a>
+          <a href="#services" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Services</a>
+          <a href="#portfolio" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Portfolio</a>
+          <a href="#blogs" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Blogs</a>
+          <a href="#contact" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Contact</a>
+          <button className="bg-white px-3 py-3 rounded-sm hover:bg-orange-700 hover:text-white duration-1000 text-black my-3" onClick={() => setIsOpen(false)}>Get Started</button>
+        </div>
       </div>
     </nav>
   );

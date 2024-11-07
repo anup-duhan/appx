@@ -14,7 +14,7 @@ const Hero = () => {
       }, []);
     return (
         <div className='bg-color' id="home">
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-[18px]'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-[18px] overflow-hidden'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
                 <div data-aos="fade-right">
                     <h1 className=' text-[43px] lg:text-7xl mt-[20px] lg:mt-[50px] font-bold leading-none font-style'> Your journey to better credit</h1>

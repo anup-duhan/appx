@@ -6,7 +6,7 @@ const CreditAccess = () => {
         <div className='lg:my-14 my-5' id="blogs">
             <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-6'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
-                    <div className='flex flex-col justify-center gap-5 order-1' data-aos="fade-up-right">
+                    <div className='flex flex-col justify-center gap-5 order-1 overflow-hidden' data-aos="fade-up-right">
                       
                         <div>
                             <h1 className='text-black  text-4xl lg:text-5xl max-w-[476px] font-semibold font-style'> We believe credit should be more accessible</h1>

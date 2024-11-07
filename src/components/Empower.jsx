@@ -6,10 +6,10 @@ const Empower = () => {
     <div className='lg:my-14 my-5' id="about">
     <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-6'>
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
-      <div className=' order-2 lg:order-1 mt-10 lg:mt-0'data-aos="zoom-in">
+      <div className=' order-2 lg:order-1 mt-10 lg:mt-0 overflow-hidden'data-aos="zoom-in">
       <img src={Right} alt="apple" className='w-[450px]' />
       </div>
-      <div className='flex flex-col justify-center gap-5 order-1'data-aos="zoom-in">
+      <div className='flex flex-col justify-center gap-5 order-1 overflow-hidden'data-aos="zoom-in">
         <div>
       <h1 className='text-black  text-4xl lg:text-5xl max-w-[476px] font-semibold font-style'> Empower Cash Advance</h1>
       </div>

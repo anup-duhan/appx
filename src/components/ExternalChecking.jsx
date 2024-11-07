@@ -16,7 +16,7 @@ const ExternalChecking = () => {
               <button className="bg-white text-black px-3 py-3 rounded-sm hover:bg-orange-700 hover:text-white duration-1000 button-shadow "> Learn More</button>
             </span>
           </div>
-          <div className='lg:py-10' data-aos="fade-up"
+          <div className='lg:py-10 pb-10 md:pb-0' data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1500">
             <img src={bigmobile} alt="Logo" className='lg:w-[450px]' />
