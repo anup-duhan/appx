@@ -10,7 +10,9 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="logo" className="w-[33px] h-[33px]" />
+            <a href="#contact">
+              <img src={logo} alt="logo" className="w-[33px] h-[33px]" />
+            </a>
           </div>
 
           {/* Links */}
@@ -50,9 +52,8 @@ const Navbar = () => {
 
         {/* Dropdown for Mobile */}
         <div
-          className={`md:hidden text-center z-50 absolute top-16 left-0 w-full bg-[#fcbf4e] transform transition-transform duration-500 ${
-            isOpen ? 'translate-x-0' : '-translate-x-full'
-          }`}
+          className={`md:hidden text-center z-50 absolute top-16 left-0 w-full bg-[#fcbf4e] transform transition-transform duration-500 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+            }`}
         >
           <a href="#home" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Home</a>
           <a href="#about" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>About</a>

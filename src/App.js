@@ -12,6 +12,7 @@ import FooterEnd from './components/common/FooterEnd';
 import BackToTop from './components/common/BackToTop';
 import VisitorCounter from './components/common/VisitorCounter';
 
+
 function App() {
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
       <Trusted />
       <CreditAccess />
       <Footer />
-      <VisitorCounter/>
+      <VisitorCounter />
       <FooterEnd />
     </>
   );
