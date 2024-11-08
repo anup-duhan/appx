@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -10,29 +10,29 @@ html{
 @font-face {
   font-family: 'Sentiant';
   src: url('./assests/Fonts/OTF/Sentient-Regular.otf') format('woff2');
-       
+
   font-weight: normal;
   font-style: normal;
 }
 
-.fonts{
+.fonts {
   src: url("./assests/Fonts/OTF/Sentient-Regular.otf");
 }
 
 /* ----------------------------------------------- */
 
 
-.font-style{
+.font-style {
   font-family: 'Sentiant', sans-serif;
 }
 
-@media (min-width:768px){
-  .bg-color{
-    background: linear-gradient(to right, whitesmoke 60%,  rgb(252, 191, 78) 40%);
+@media (min-width:768px) {
+  .bg-color {
+    background: linear-gradient(to right, whitesmoke 60%, rgb(252, 191, 78) 40%);
   }
 }
 
-.nav-bgcolor{
+.nav-bgcolor {
   background-color: rgb(252, 191, 78);
 }
 
@@ -41,18 +41,24 @@ html{
 
 
 .button-shadow {
-  box-shadow: 8px 8px rgb(252, 191, 78); /* orange shadow */
+  box-shadow: 8px 8px rgb(252, 191, 78);
+  /* orange shadow */
 }
 
 .button-nav {
-  box-shadow: 8px 8px  black; 
+  box-shadow: 8px 8px black;
 }
 
 /* ---------------button shadows  */
 
 @keyframes run-cards {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-1280px); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-1280px);
+  }
 }
 
 .running-cards {
@@ -62,28 +68,31 @@ html{
 }
 
 /* ##################-------- nav hover effects  */
- /* Custom underline effect using ::after */
+/* Custom underline effect using ::after */
 
- .nav-item::after {
+.nav-item::after {
   content: '';
   position: absolute;
-  top:28px;
+  top: 28px;
   left: 0;
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #c2410c; /* White underline color */
+  background-color: #c2410c;
+  /* White underline color */
   transition: width 0.5s ease;
- 
+
 }
 
 .nav-item:hover::after {
-  width: 100%; /* Expand underline on hover */
+  width: 100%;
+  /* Expand underline on hover */
 }
 
 
 .card-shadow {
-  box-shadow: 3px 3px 3px 3px rgb(59, 59, 57); /* orange shadow */
+  box-shadow: 3px 3px 3px 3px rgb(59, 59, 57);
+  /* orange shadow */
 }
 
 
@@ -94,18 +103,76 @@ html{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(224, 220, 220); 
+  box-shadow: inset 0 0 5px rgb(224, 220, 220);
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:orange;
+  background: orange;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background:rgb(224, 150, 12); 
+  background: rgb(224, 150, 12);
 }
 
+/* Text gradient with bg-clip */
+.gradient-text {
+  background: repeating-radial-gradient(circle, #00c6ff, #0072ff, #004a8f, #001f4d, #000833 5%);
+  background-size: 200% 200%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* For WebKit browsers */
+}
+
+/* Animation for moving gradient background */
+.animate-gradient {
+  animation: gradientChange 25s ease infinite;
+}
+
+/* Keyframes for moving the gradient background */
+@keyframes gradientChange {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+
+
+
+/* App.css or Preloader.css */
+@keyframes grow-shrink {
+
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+
+.animate-grow-shrink {
+  animation: grow-shrink 1s ease-in-out infinite;
+}
+
+.delay-150 {
+  animation-delay: 0.15s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
