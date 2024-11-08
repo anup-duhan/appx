@@ -1,5 +1,6 @@
 import React from 'react'
 import footerlogo from '../../assests/images/footerlogo.png';
+import { Facebook, Instagram, Twitter } from './Icons';
 const FooterEnd = () => {
     return (
         <>
@@ -7,7 +8,9 @@ const FooterEnd = () => {
                 <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-6'>
                     <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-6">
                         <div className=" col-span-1 md:col-span-2 lg:col-span-2 flex flex-col gap-6 py-10 md:py-0">
-                            <img src={footerlogo} alt="footerlogo" className='w-[86px]' />
+                            <a href="#home">
+                                <img src={footerlogo} alt="footerlogo" className='w-[86px]' />
+                            </a>
                             <p className='text-base text-white leading-[19px; max-w-[331px] font-normal'>Lorem ipsum dolor sit amet consectetur adipiscin eli a sit facilisis volutpat interdum non a magna tempus amet velit dolor sit.</p>
                             <span>
                                 <button className="bg-white text-black px-3 py-3 rounded-sm hover:bg-orange-700 hover:text-white duration-1000 button-shadow "> Get Started</button>
@@ -28,9 +31,9 @@ const FooterEnd = () => {
                             <a href="#" className='hover:text-orange-700 duration-500'> Privacy</a>
                         </div>
                         <div className=" text-white text-lg flex flex-col gap-5 col-span-1 py-10 md:py-0">
-                            <a href="#" className='hover:text-orange-700 duration-500' >Twitter </a>
-                            <a href="#" className='hover:text-orange-700 duration-500'> Instagram</a>
-                            <a href="#" className='hover:text-orange-700 duration-500'> LinkedIn</a>
+                            <a href="#" className='hover:text-orange-700 duration-500 flex  items-center gap-2' > <Twitter />Twitter </a>
+                            <a href="#" className='hover:text-orange-700 duration-500 flex  items-center gap-2' > <Instagram />Instagram </a>
+                            <a href="#" className='hover:text-orange-700 duration-500 flex items-center gap-2'> <Facebook /> Facebook</a>
 
                         </div>
                         <div className=" text-white text-lg flex flex-col gap-5 col-span-1 py-10 md:py-0">
