@@ -13,7 +13,7 @@ const TypewriterComponent: React.FC<TypewriterComponentProps> = ({ words }) => {
         words={words}
         loop={0} // Set to 0 for infinite loop
         cursor
-        cursorStyle={<span style={{ color: 'blue', fontSize: '2rem', fontWeight: 'bold' }}>|</span>}
+        // cursorStyle={<span style={{ color: 'blue', fontSize: '2rem', fontWeight: 'bold' }}>|</span>}
         typeSpeed={200}
         deleteSpeed={100}
         delaySpeed={1500}
