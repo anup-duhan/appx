@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from '../../assests/images/logo.png';
+import { CloseButton } from "./Icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
 
           {/* Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#home" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Home</a>
+            <a href="#home" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative ">Home</a>
             <a href="#about" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">About</a>
             <a href="#services" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Services</a>
             <a href="#portfolio" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Portfolio</a>
@@ -62,6 +63,7 @@ const Navbar = () => {
           <a href="#blogs" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Blogs</a>
           <a href="#contact" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Contact</a>
           <button className="bg-white px-3 py-3 rounded-sm hover:bg-orange-700 hover:text-white duration-1000 text-black my-3" onClick={() => setIsOpen(false)}>Get Started</button>
+         <icon className='absolute top-0 right-3'onClick={() => setIsOpen(false)}> <CloseButton/> </icon>
         </div>
       </div>
     </nav>
