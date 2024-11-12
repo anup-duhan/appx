@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from '../../assests/images/logo.png';
-import { CloseButton } from "./Icons";
+import { CloseButton, LogoIcon } from "./Icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +16,22 @@ const Navbar = () => {
             </a>
           </div>
 
+
+
           {/* Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#home" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative ">Home</a>
+            <div className="relative group">
+              <a href="#home" className="hover:text-orange-700 font-bold transition duration-1000 nav-item">
+                Home
+              </a>
+              <div className="hidden group-hover:block absolute top-full mt-3 border-b-4 border-orange-700 bg-[#fcbf4e] p-2 rounded shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-2">
+                <div className="px-20 py-10 flex justify-center items-center">
+                  <h1 className="text-3xl text-black font-bold text-center"> Welcome To The Appx</h1>
+                  <img src={logo} alt="logo" className="" />
+                </div>
+              </div>
+            </div>
+
             <a href="#about" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">About</a>
             <a href="#services" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Services</a>
             <a href="#portfolio" className="hover:text-orange-700 font-bold transition duration-1000 nav-item relative">Portfolio</a>
@@ -33,20 +46,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="focus:outline-none"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              <LogoIcon />
             </button>
           </div>
         </div>
@@ -63,10 +63,11 @@ const Navbar = () => {
           <a href="#blogs" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Blogs</a>
           <a href="#contact" className="block py-2 px-4 hover:bg-orange-700" onClick={() => setIsOpen(false)}>Contact</a>
           <button className="bg-white px-3 py-3 rounded-sm hover:bg-orange-700 hover:text-white duration-1000 text-black my-3" onClick={() => setIsOpen(false)}>Get Started</button>
-         <icon className='absolute top-0 right-3'onClick={() => setIsOpen(false)}> <CloseButton/> </icon>
+          <icon className='absolute top-0 right-3' onClick={() => setIsOpen(false)}> <CloseButton /> </icon>
         </div>
       </div>
     </nav>
+
   );
 };
 
