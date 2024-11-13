@@ -11,7 +11,7 @@ import ExternalChecking from './components/ExternalChecking';
 import Trusted from './components/Trusted';
 import CreditAccess from './components/CreditAccess';
 import FooterEnd from './components/common/FooterEnd';
-import GmailForm from './GmailForm';
+
 
 
 
@@ -64,7 +64,6 @@ function App() {
           <Trusted />
           <CreditAccess />
           <Footer />
-          <GmailForm/>
           <VisitorCounter />
           <FooterEnd />
         </>
